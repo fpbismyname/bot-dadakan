@@ -1,5 +1,6 @@
 const mineflayer = require('mineflayer');
-// const keep_alive = require('./keep_alive');
+const keep_alive = require('./keep_alive');
+const http= require('http')
 
 var connects = 0
 try{
