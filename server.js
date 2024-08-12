@@ -1,5 +1,6 @@
 const mineflayer = require('mineflayer');
-const dotenv = require('dotenv')
+const dotenv = require('dotenv');
+
 
 
 
@@ -9,7 +10,6 @@ try {
     console.log(err)
 } finally {
     // const keep_alive = require('./keep_alive');
-
     var connects = 0
     try {
         const connect = () => {
@@ -32,15 +32,12 @@ try {
             });
 
             bot.on('end', () => {
-                console.clear()
+                // console.clear()
                 console.log('Bot telah mati.' + connects);
-                setTimeout(()=>{
-                    connect()
-                },1000)
+                connect();
             });
             bot.on('death', () => {
                 bot.respawn()
-                connect()
             })
             bot.on('playerLeft', () => {
                 connect()
@@ -50,7 +47,7 @@ try {
             })
         }
         connect()
-        console.clear()
+        // console.clear()
     } catch (err) {
         console.error('Error:', err);
     }
