@@ -17,7 +17,7 @@ try {
             const bot = mineflayer.createBot({
                 host: process.env.SERVER_ATERNOS, // Ganti dengan IP server Aternos kamu
                 port: process.env.PORT_SERVER,                    // Port default Minecraft, ganti jika berbeda
-                username: process.env.BOT_NAME,            // Nama pengguna bot
+                username: process.env.BOTNAME,            // Nama pengguna bot
                 version: process.env.MINECRAFT_VERSION               // Versi Minecraft yang sama dengan server kamu
             });
             // bot.on('spawnReset', ()=>{
