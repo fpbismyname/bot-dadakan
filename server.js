@@ -24,7 +24,7 @@ try {
             //     console.log('Bot telah respawn')
             // })
             bot.on('spawn', () => {
-                console.log('Bot has spawned in the game.');
+                console.log(`${process.env.BOTNAME} sedang aktif, dan menjaga world`);
             });
 
             bot.on('error', err => {
@@ -33,8 +33,8 @@ try {
 
             bot.on('end', () => {
                 // console.clear()
-                console.log('Bot telah mati.' + connects);
-                connect();
+                console.log(`${process.env.BOTNAME} Mokad, Try to Connect ${connects} times`);
+                connect()
             });
             bot.on('death', () => {
                 bot.respawn()
